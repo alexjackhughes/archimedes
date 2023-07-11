@@ -39,9 +39,9 @@ class Archimedes:
         {"role": "user", "content": f"I want you to assume this identity '{self.identity}' and do this goal {self.goal}. To hellp you achive this goal, here is some resources I've made: {memory}"}
       ]
 
-      attempt_goal = generate_completion(prompt="", messages=messages)   
-      print(f"attempted goal: {attempt_goal}")
-      add_action(attempt_goal)
+      g = generate_completion(prompt="", messages=messages)   
+      print(f"attempted goal: {g}")
+      add_action(g)
 
     def stage(self, current_thought):
       self.do_thought(current_thought)
@@ -66,6 +66,7 @@ class Archimedes:
         while count < 5:
           current_thought = self.backstage()
           self.stage(current_thought)
+          self.attempt_goal()
           self.reflection()
 
           print(f"Current Identity: {self.identity}")

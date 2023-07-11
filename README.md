@@ -55,3 +55,34 @@ Contributions are welcome! If you would like to contribute to Archimedes AGI, pl
 ### Acknowledgments
 
 [Alex Hughes](twitter.com/alexjackhughes)
+
+## TODO
+
+[Link](https://chat.openai.com/c/fd5079b3-c798-46c9-aab5-32318a119168)
+
+Create the AGI System Class:
+
+Initialization of the system with a given identity and goal.
+A method to generate new thoughts based on the current goal.
+A method to present the most relevant thought to the "stage".
+A method to allow the ego to generate new actions based on the thought currently on the stage.
+A method to evaluate the success of these actions in achieving the goal.
+A method to update the ego's sense of self based on the outcomes of the actions and new experiences.
+A method to continually evaluate the success of the current process in achieving the goal and, if needed, generate a new thought to re-evaluate the current process and consider a different direction.
+Create a Main Execution Flow:
+
+Initialize the AGI system.
+Enter a loop where the system continuously generates new thoughts, presents them to the stage, generates actions, performs them, and evaluates their outcomes.
+Update the ego's sense of self and the system's goal as needed based on the outcomes of the actions.
+Continually monitor and adjust the system's process based on its success in achieving the goal.
+Create a Backstage Process:
+
+Continually generate new thoughts in the background.
+Rank these thoughts based on their relevance to the goal and the ego's current sense of self.
+Present the most relevant thought to the stage for the ego to consider.
+Integrate the MemoryStore with the AGI System:
+
+Store each thought and the corresponding action in the MemoryStore after it's processed on the stage.
+Retrieve relevant thoughts from the MemoryStore when generating new thoughts.
+Use the MemoryStore to help update the ego's sense of self based on past experiences.
+These steps give a high-level plan for building the AGI system as per our discussions. Each step involves a significant amount of work and could potentially be broken down further into sub-steps. The actual implementation would also need to take into account various practical considerations, such as the specific AI models and APIs to use, the ways to interact with the system's environment, and the criteria for evaluating the success of actions and processes.

@@ -16,7 +16,6 @@ class Archimedes:
 
     def do_thought(self, thought):
       formulate_question = generate_completion(f"Without explaining yourself, I want you to turn this idea: '{thought}' into a incredibly well-thought out query and goal, that I will then ask GPT to answer. You should not mention GPT, but simply try and write the best question possible that will achieve this idea.")
-      print(f"current task: {formulate_question}")
 
       messages = [
         {"role": "system", "content": f"You are a genius level assistant, that has assumed this identity: {self.identity}. Your goal is to: {self.goal}. You should aim to be as creative and clever as possible, and answer any questions to the best of your ability."},
@@ -26,7 +25,6 @@ class Archimedes:
       ]
 
       action = generate_completion(prompt="", messages=messages)  
-      print(f"current action: {action}")
       self.memory.store_thought(action)  # add the thought to memory
 
     def attempt_goal(self):
@@ -40,7 +38,6 @@ class Archimedes:
       ]
 
       g = generate_completion(prompt="", messages=messages)   
-      print(f"attempted goal: {g}")
       add_action(g)
 
     def stage(self, current_thought):
@@ -71,7 +68,6 @@ class Archimedes:
 
           print(f"Current Identity: {self.identity}")
           print(f"Current Goal: {self.goal}")
-          # print(f"Current thoughts: {self.subconscious_thoughts}")
 
           count = count + 1
           

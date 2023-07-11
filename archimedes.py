@@ -1,4 +1,4 @@
-from actions import add_action, get_action
+from actions import add_action, get_action, do_thought
 from memory import MemoryStore
 from completion import generate_completion
 import time
@@ -12,13 +12,12 @@ class Archimedes:
 
         self.wait_time = wait_time
 
-    # ...other methods...
+   
 
     def run(self):
         flag = True
         while flag:
-          completion = generate_completion("what does 2+2 equal?")
-          print(completion)
+          do_thought('We should work out what 2+2 equals')
           # thought = self.run_backstage()
           # if thought:
           #   conscious_thought = self.run_stage(thought)
@@ -30,8 +29,14 @@ class Archimedes:
           # Running memory
           # self.memory.store_thought('hello world')
           # x = self.memory.retrieve_thought('hello')
+
           # Adding actions
           # add_action("Do one")
           # time.sleep(self.wait_time)
           # add_action("Do two")
+
+          # Running OpenAI chat completion
+          completion = generate_completion("what does 2+2 equal?")
+          print(completion)
+
           flag = False

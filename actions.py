@@ -1,4 +1,5 @@
 import os
+from completion import generate_completion
 
 # A function that takes an action and adds it to our actions folder, for easy use in the future
 def add_action(action_string, action_folder="actions"):
@@ -39,3 +40,10 @@ def get_actions(action_folder="actions"):
                     actions.append(action_content)
 
     return actions
+
+# A function, that given a thought will attempt to do the thought
+def do_thought(thought):
+    formulate_question = generate_completion(f"I have an idea, but could you re-phrase it into a question to ask you. Be as detailed as possible: {thought}")
+    action = generate_completion(formulate_question)
+
+    return action

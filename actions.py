@@ -6,7 +6,6 @@ def add_action(action_string, action_folder="actions"):
     # Check if the actions folder exists, and create it if it doesn't
     if not os.path.exists(action_folder):
         os.makedirs(action_folder)
-        print(f"Created folder: {action_folder}")
 
     # Assign a unique ID to the action based on the number of existing actions
     action_id = len(os.listdir(action_folder)) + 1
@@ -14,8 +13,6 @@ def add_action(action_string, action_folder="actions"):
 
     with open(action_filename, 'w') as file:
         file.write(action_string)
-
-    print(f"Action added: {action_string}")
 
 # A function that retrieves the contents of a file in the actions folder
 def get_action(action_id, action_folder="actions"):

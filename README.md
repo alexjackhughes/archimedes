@@ -67,3 +67,7 @@ General Plan
 - This gets saved in memory, for use later
 - We then attempt to do the goal, and save the result of that in a folder
 - We then reflect on ourselves, and try to improve
+
+## TODO:
+
+Rather than being seperate completions, could there instead be one massive completion that does all the parts at once?

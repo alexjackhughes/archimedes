@@ -70,7 +70,8 @@ class Archimedes:
           print(f"Current Goal: {self.goal}")
 
           count = count + 1
-          
+          # TODO: Rather than count, we could instead compare the last action against the goal, and make a decision on whether to continue or not.
+
           # REFERENCE:
           # Running memory
           # self.memory.store_thought('hello world')

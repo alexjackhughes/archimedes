@@ -1,0 +1,5 @@
+# Ignore the contents of the CSV folder
+/actions/*
+
+.DS_Store
+.env

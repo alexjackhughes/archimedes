@@ -22,11 +22,12 @@ class MemoryStore:
         self.index = pinecone.Index(index_name=index_name)
 
     def store_thought(self, thought_string):
+        id = self.check_string_length(thought_string)
         # Use an AI model to convert the thought string into a vector
         thought_vector = self.embed_thought(thought_string)
 
         # Store the thought in the vector database
-        self.index.upsert([(thought_string, thought_vector.tolist())])
+        self.index.upsert([(id, thought_vector.tolist())])
 
     def retrieve_thought(self, query_string):
         # Use an AI model to convert the query string into a vector
@@ -45,3 +46,15 @@ class MemoryStore:
       )
       embeddings = response['data'][0]['embedding']
       return np.array(embeddings)  # Convert the list of embeddings to a numpy array
+
+    def check_string_length(self, s):
+        # Define the maximum length
+        MAX_LENGTH = 512
+
+        # Check the length of the string
+        if len(s) > MAX_LENGTH:
+            # If the string is too long, truncate it
+            return s[:MAX_LENGTH]
+        else:
+            # If the string is short enough, return it as is
+            return s

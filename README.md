@@ -50,6 +50,8 @@ Here's a simple example of how to use the Archimedes system:
 
 Contributions to Archimedes are warmly welcomed! Here are some areas where the project could potentially be improved:
 
+- **The Backstage**: This is very raw version of the backstage, ideally how it should work is that it has the ability to rank the thoughts by their urgency, and bubble the right one to the top.
+- **Better use of memories**: The system remembers it's thoughts, but these could be better integrated into the prompts, to create new, more interesting thoughts.
 - **Performance Evaluation**: Implement a system for evaluating the performance of the AGI, such as measuring how well it's achieving its goals or how its performance changes over time.
 - Learning and Adaptation: Improve the system's ability to learn from its past actions and adapt its future actions accordingly.
 - **Parallelization**: Implement a system for generating and evaluating multiple thoughts in parallel, which could potentially speed up the process.

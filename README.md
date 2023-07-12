@@ -55,9 +55,10 @@ Contributions to Archimedes are warmly welcomed! Here are some areas where the p
 - **Performance Evaluation**: Implement a system for evaluating the performance of the AGI, such as measuring how well it's achieving its goals or how its performance changes over time.
 - Learning and Adaptation: Improve the system's ability to learn from its past actions and adapt its future actions accordingly.
 - **Parallelization**: Implement a system for generating and evaluating multiple thoughts in parallel, which could potentially speed up the process.
-- **Interactivity**: Add the ability for the AGI to interact with its environment, such as by taking in inputs from the user or the outside world.
-- **Emotion Simulation**: Incorporate elements of emotional intelligence into the AGI, such as by giving it the ability to simulate emotions or to take into account the emotional implications of its actions.
-  If you have an idea for an improvement or a new feature, feel free to submit a pull request or open an issue on GitHub. We look forward to your contributions!
+- **Interactivity**: Add the ability for the AGI to interact with its environment, such as by taking in inputs from the user or the outside world. One thing I thought about would be if it was able to re-write the main archimedes file, based on the success of its actions.
+- **Stimulus**: In humans, thoughts like "I'm hungry" pop into your head based on your needs outside of your mind, and these thoughts cause us to act on them by, for example going to the fridge. The backstage could introduce this concept with more nunace, where "unwanted" thoughts occassionally bubble to the top, to make sure the AI isn't just navel gazing, but actually attempting to do important work.
+
+If you have an idea for an improvement or a new feature, feel free to submit a pull request or open an issue on GitHub. We look forward to your contributions!
 
 Please feel free to use however you like!
 
